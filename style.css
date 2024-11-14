@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.page {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #fff; /* Normal background */
+    position: relative; /* Needed for error text positioning */
+}
+
+/* Style for input when there's an error */
+input.error {
+    border-color: #e74c3c;
+    color: #e74c3c; /* Red text */
+}
+
+/* Display error message inside the input field */
+input.error::placeholder {
+    color: #e74c3c; /* Red placeholder color */
+}
+
+/* Optional: Make the error text background slightly transparent to avoid overlap */
+input.error::after {
+    content: attr(data-error); /* Set error message text */
+    color: #e74c3c;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-style: italic;
+    display: block;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #6c757d;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#attempts-left {
+    color: #f39c12;
+}
+
+#feedback {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+#winner-page h2 {
+    color: #3498db;
+}
+
+
+
+
